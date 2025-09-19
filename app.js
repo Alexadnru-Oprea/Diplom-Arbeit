@@ -30,10 +30,8 @@ app.post("/login", (req, res) => {
   res.json({ message: `Willkommen, ${username}` });
 });
 
-// === защищённый маршрут (для примера) ===
 app.get("/profile", (req, res) => {
-  // в таком виде нет настоящей авторизации,
-  // просто показываем что сервер работает
+
   res.json({ message: "Dies wäre ein geschützter Bereich" });
 });
 
