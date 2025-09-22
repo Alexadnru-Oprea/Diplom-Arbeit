@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "username": "Oprea",
+      "password": "1234"
+    },
+    {
+      "username": "Alex",
+      "password": "4321"
+    }
+  ],
+  "tasks": {
+    "Oprea": [
+      {
+        "wer": "fabgv",
+        "was": "qerhwr",
+        "biswann": "aerghw4",
+        "hilfsmittel": "weryu"
+      }
+    ],
+    "Alex": [
+      {
+        "wer": "Oprea Sergei",
+        "was": "Zehne putzen",
+        "biswann": "07:15",
+        "hilfsmittel": "Zahnpaste"
+      }
+    ]
+  }
+}
