@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do Liste</title>
+  <script src="../backEnd/myscripts.js" defer></script>
+  <style>
+    table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+    input.td { width: 120px; }
+  </style>
+</head>
+<body>
+  <h1>To Do Liste</h1>
+
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>Wer</th>
+        <th>Was</th>
+        <th>Bis wann</th>
+        <th>Hilfsmittel</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Neue Aufgabe hinzufügen</h3>
+  <input type="text" id="Wer" placeholder="Wer">
+  <input type="text" id="Was" placeholder="Was">
+  <input type="text" id="Biswann" placeholder="Bis wann">
+  <input type="text" id="Hilfsmittel" placeholder="Hilfsmittel">
+  <button onclick="addRow()">Hinzufügen</button>
+  <button onclick="logout()">Logout</button>
+</body>
+</html>
