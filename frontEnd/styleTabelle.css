@@ -1,0 +1,69 @@
+/* Alles mittig ausrichten */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Tabelle in der Mitte */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+/* Eingabefelder zentriert untereinander */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.input-container input {
+  margin: 5px 0;
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons nebeneinander mittig */
+.button-container {
+  margin: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To Do Liste</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styleTabelle.css" />
+  </head>
+  <body>
+    <h1>To Do Liste</h1>
+
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Wer</th>
+          <th>Was</th>
+          <th>Bis wann</th>
+          <th>Hilfsmittel</th>
+          <th>Erledigt</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h3>Neue Aufgabe hinzufügen</h3>
+    <div class="input-container">
+      <input type="text" id="Wer" placeholder="Wer" />
+      <input type="text" id="Was" placeholder="Was" />
+      <input type="text" id="Biswann" placeholder="Bis wann" />
+      <input type="text" id="Hilfsmittel" placeholder="Hilfsmittel" />
+    </div>
+    <div class="button-container">
+      <button onclick="addRow()">Hinzufügen</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <title>To Do Liste</title>
