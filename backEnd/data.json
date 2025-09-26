@@ -9,8 +9,8 @@
       "password": "4321"
     },
     {
-      "username": "lilea",
-      "password": "1111"
+      "username": "lisa",
+      "password": "1234"
     }
   ],
   "tasks": {
@@ -209,6 +209,42 @@
         "hilfsmittel": "Zahnpaste"
       }
     ],
-    "lilea": []
+    "lisa": [
+      {
+        "wer": "ewr",
+        "was": "gfh",
+        "biswann": "ui",
+        "hilfsmittel": "jkk",
+        "erledigt": true
+      },
+      {
+        "wer": "wwef",
+        "was": "xc",
+        "biswann": "vb",
+        "hilfsmittel": "zu",
+        "erledigt": false
+      },
+      {
+        "wer": "ert",
+        "was": "dfg",
+        "biswann": "ad",
+        "hilfsmittel": "",
+        "erledigt": false
+      },
+      {
+        "wer": "wer",
+        "was": "sdfwer",
+        "biswann": "sdf",
+        "hilfsmittel": "sdf",
+        "erledigt": true
+      },
+      {
+        "wer": "er",
+        "was": "t",
+        "biswann": "d",
+        "hilfsmittel": "w",
+        "erledigt": false
+      }
+    ]
   }
 }
