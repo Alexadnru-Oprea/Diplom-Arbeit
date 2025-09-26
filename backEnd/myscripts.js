@@ -5,7 +5,9 @@ if (!username) window.location.href = "index.html";
 async function loadTasks() {
   const res = await fetch(`http://localhost:3000/tasks/${username}`);
   const tasks = await res.json();
-  const table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+  const table = document
+    .getElementById("myTable")
+    .getElementsByTagName("tbody")[0];
   table.innerHTML = "";
 
   tasks.forEach((t, index) => {
@@ -30,7 +32,7 @@ async function loadTasks() {
       await fetch(`http://localhost:3000/tasks/${username}/${index}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ erledigt: this.checked })
+        body: JSON.stringify({ erledigt: this.checked }),
       });
     });
 
@@ -44,13 +46,16 @@ async function addRow() {
   const was = document.getElementById("Was").value;
   const biswann = document.getElementById("Biswann").value;
   const hilfsmittel = document.getElementById("Hilfsmittel").value;
-  if (!wer || !was || !biswann) { alert("Bitte alle Felder ausfüllen!"); return; }
+  if (!wer || !was || !biswann) {
+    alert("Bitte alle Felder ausfüllen!");
+    return;
+  }
 
   const task = { wer, was, biswann, hilfsmittel, erledigt: false };
   await fetch("http://localhost:3000/tasks", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, task })
+    body: JSON.stringify({ username, task }),
   });
   loadTasks(); // обновляем таблицу
   document.getElementById("Wer").value = "";

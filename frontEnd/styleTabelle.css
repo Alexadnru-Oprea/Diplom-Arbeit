@@ -67,3 +67,6 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+.erledigt {
+  background-color: lightgreen !important;
+}

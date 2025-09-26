@@ -7,6 +7,10 @@
     {
       "username": "Alex",
       "password": "4321"
+    },
+    {
+      "username": "lisa",
+      "password": "1234"
     }
   ],
   "tasks": {
@@ -52,6 +56,15 @@
         "was": "Zehne putzen",
         "biswann": "07:15",
         "hilfsmittel": "Zahnpaste"
+      }
+    ],
+    "lisa": [
+      {
+        "wer": "ewr",
+        "was": "gfh",
+        "biswann": "ui",
+        "hilfsmittel": "jkk",
+        "erledigt": true
       }
     ]
   }
