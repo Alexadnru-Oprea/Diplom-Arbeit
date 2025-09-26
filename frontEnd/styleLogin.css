@@ -7,6 +7,12 @@ body {
   align-items: center;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Container untereinander */
+  gap: 30px; /* Abstand zwischen Login und Registrierung */
+  width: 300px;
+}
 .container {
   background: white;
   padding: 30px;
