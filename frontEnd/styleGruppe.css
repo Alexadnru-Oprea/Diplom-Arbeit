@@ -1,0 +1,51 @@
+/* Общие стили для body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Заголовок */
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Подзаголовок */
+p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Стили для кнопок */
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Эффект при наведении */
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Для маленьких экранов кнопки на всю ширину */
+@media (max-width: 500px) {
+  button {
+    width: 80%;
+    margin: 8px 0;
+  }
+}
