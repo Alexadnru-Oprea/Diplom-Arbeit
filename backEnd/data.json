@@ -7,6 +7,10 @@
     {
       "username": "Alex",
       "password": "4321"
+    },
+    {
+      "username": "lilea",
+      "password": "1111"
     }
   ],
   "tasks": {
@@ -53,6 +57,7 @@
         "biswann": "07:15",
         "hilfsmittel": "Zahnpaste"
       }
-    ]
+    ],
+    "lilea": []
   }
 }
