@@ -79,4 +79,9 @@ function logout() {
   window.location.href = "index.html";
 }
 
+// вернуться на выбор группы, не удаляя текущую
+function back() {
+  window.location.href = "gruppen.html";
+}
+
 loadTasks();
