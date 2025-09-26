@@ -4,20 +4,34 @@
   <meta charset="UTF-8">
   <title>Gruppe wählen</title>
   <link rel="stylesheet" href="styleGruppe.css">
+  <link rel="stylesheet" href="styleTabelle.css">
   <script>
     const username = localStorage.getItem("username");
     if (!username) window.location.href = "index.html";
+
+    // Вставляем имя пользователя в приветствие
+    window.addEventListener("DOMContentLoaded", () => {
+      const greeting = document.getElementById("greeting");
+      greeting.innerText = `Willkommen, ${username}!`;
+    });
 
     function selectGroup(group){
       localStorage.setItem("group", group);
       window.location.href = "toDoListe.html";
     }
+
+    function logout() {
+      localStorage.removeItem("username");
+      localStorage.removeItem("group");
+      window.location.href = "index.html";
+    }
   </script>
 </head>
 <body>
-  <h1>Willkommen!</h1>
+  <h1 id="greeting">Willkommen!</h1> <!-- имя добавится через JS -->
   <p>Wähle deine Gruppe:</p>
   <button onclick="selectGroup('schule')">Schule</button>
   <button onclick="selectGroup('haus')">Haus</button>
+  <button class="logout-btn" onclick="logout()">Logout</button>
 </body>
 </html>
