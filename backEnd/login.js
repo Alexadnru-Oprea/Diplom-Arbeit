@@ -23,7 +23,7 @@ const data = await res.json();
 alert(data.message);
   if (data.message === "Login erfolgreich!") {
     localStorage.setItem("username", username);
-    window.location.href = "toDoListe.html";
+    window.location.href = "gruppen.html";
   }
 });
 
