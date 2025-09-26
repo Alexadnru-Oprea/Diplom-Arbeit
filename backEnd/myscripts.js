@@ -1,9 +1,24 @@
 const username = localStorage.getItem("username");
-if (!username) window.location.href = "index.html";
+const group = localStorage.getItem("group");
+if (!username || !group) window.location.href = "index.html";
 
-// Загружаем задачи
+// проверка: существует ли группа, если нет – создаём пустую
+async function ensureGroupExists() {
+  const res = await fetch(`http://localhost:3000/tasks/${username}/${group}`);
+  if (res.status === 404) {
+    await fetch("http://localhost:3000/tasks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, group, task: null }) // создаём пустую группу
+    });
+  }
+}
+
+// загрузка задач
 async function loadTasks() {
-  const res = await fetch(`http://localhost:3000/tasks/${username}`);
+  await ensureGroupExists(); // сначала создаём группу если нужно
+
+  const res = await fetch(`http://localhost:3000/tasks/${username}/${group}`);
   const tasks = await res.json();
   const table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
   table.innerHTML = "";
@@ -15,21 +30,18 @@ async function loadTasks() {
     row.insertCell(2).innerText = t.biswann;
     row.insertCell(3).innerText = t.hilfsmittel;
 
-    // ✅ Чекбокс "Erledigt"
     const erledigtCell = row.insertCell(4);
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.checked = t.erledigt === true; // восстановить состояние
+    checkbox.checked = t.erledigt === true;
 
-    // зачёркивать строку если erledigt = true
     row.style.textDecoration = checkbox.checked ? "line-through" : "none";
-    row.style.backgroundColor = checkbox.checked ? "green" : "white"; // <-- добавляем цвет
+    row.style.backgroundColor = checkbox.checked ? "green" : "white";
 
-    // обработчик изменения чекбокса
     checkbox.addEventListener("change", async function () {
       row.style.textDecoration = this.checked ? "line-through" : "none";
-      row.style.backgroundColor = this.checked ? "green" : "white"; // <-- цвет строки
-      await fetch(`http://localhost:3000/tasks/${username}/${index}`, {
+      row.style.backgroundColor = this.checked ? "green" : "white";
+      await fetch(`http://localhost:3000/tasks/${username}/${group}/${index}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ erledigt: this.checked })
@@ -40,7 +52,7 @@ async function loadTasks() {
   });
 }
 
-// Добавляем новую задачу
+// добавить задачу
 async function addRow() {
   const wer = document.getElementById("Wer").value;
   const was = document.getElementById("Was").value;
@@ -52,17 +64,18 @@ async function addRow() {
   await fetch("http://localhost:3000/tasks", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, task })
+    body: JSON.stringify({ username, group, task })
   });
-  loadTasks(); // обновляем таблицу
+  loadTasks();
   document.getElementById("Wer").value = "";
   document.getElementById("Was").value = "";
-  document.getElementById("Biswann").value = "";
+  document.getElementById("BisWann").value = "";
   document.getElementById("Hilfsmittel").value = "";
 }
 
 function logout() {
   localStorage.removeItem("username");
+  localStorage.removeItem("group");
   window.location.href = "index.html";
 }
 
