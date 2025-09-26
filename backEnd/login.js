@@ -27,10 +27,3 @@ alert(data.message);
   }
 });
 
-
-// показать всех пользователей
-document.getElementById("showUsersBtn").addEventListener("click", async () => {
-  const res = await fetch("http://localhost:3000/users");
-  const users = await res.json();
-  console.log("Alle Benutzer:", users);
-});

@@ -34,14 +34,14 @@
         "was": "Arbeiten",
         "biswann": "17:30",
         "hilfsmittel": "Manuel",
-        "erledigt": true
+        "erledigt": false
       },
       {
         "wer": "Liuba",
         "was": "spielen",
         "biswann": "20:00",
         "hilfsmittel": "Spielzeug",
-        "erledigt": true
+        "erledigt": false
       }
     ],
     "Alex": [
