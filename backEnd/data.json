@@ -60,38 +60,24 @@
     ],
     "lisa": [
       {
-        "wer": "ewr",
-        "was": "gfh",
-        "biswann": "ui",
-        "hilfsmittel": "jkk",
+        "wer": "df",
+        "was": "wr",
+        "biswann": "cv",
+        "hilfsmittel": "qer",
+        "erledigt": false
+      },
+      {
+        "wer": "rt",
+        "was": "fgh",
+        "biswann": "jk",
+        "hilfsmittel": "asd",
         "erledigt": true
-      },
-      {
-        "wer": "wwef",
-        "was": "xc",
-        "biswann": "vb",
-        "hilfsmittel": "zu",
-        "erledigt": false
-      },
-      {
-        "wer": "ert",
-        "was": "dfg",
-        "biswann": "ad",
-        "hilfsmittel": "",
-        "erledigt": false
       },
       {
         "wer": "wer",
-        "was": "sdfwer",
-        "biswann": "sdf",
-        "hilfsmittel": "sdf",
-        "erledigt": true
-      },
-      {
-        "wer": "er",
-        "was": "t",
-        "biswann": "d",
-        "hilfsmittel": "w",
+        "was": "edx",
+        "biswann": "wted",
+        "hilfsmittel": "scvb",
         "erledigt": false
       }
     ]
