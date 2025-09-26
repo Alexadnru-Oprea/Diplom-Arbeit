@@ -23,10 +23,12 @@ async function loadTasks() {
 
     // зачёркивать строку если erledigt = true
     row.style.textDecoration = checkbox.checked ? "line-through" : "none";
+    row.style.backgroundColor = checkbox.checked ? "green" : "white"; // <-- добавляем цвет
 
     // обработчик изменения чекбокса
     checkbox.addEventListener("change", async function () {
       row.style.textDecoration = this.checked ? "line-through" : "none";
+      row.style.backgroundColor = this.checked ? "green" : "white"; // <-- цвет строки
       await fetch(`http://localhost:3000/tasks/${username}/${index}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
