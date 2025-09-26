@@ -15,10 +15,38 @@
         "wer": "fabgv",
         "was": "qerhwr",
         "biswann": "aerghw4",
-        "hilfsmittel": "weryu"
+        "hilfsmittel": "weryu",
+        "erledigt": true
+      },
+      {
+        "wer": "Oprea Sergei",
+        "was": "Zehne putzen",
+        "biswann": "07:15",
+        "hilfsmittel": "Zahnpaste",
+        "erledigt": true
+      },
+      {
+        "wer": "Alex",
+        "was": "Arbeiten",
+        "biswann": "17:30",
+        "hilfsmittel": "Manuel",
+        "erledigt": true
+      },
+      {
+        "wer": "Liuba",
+        "was": "spielen",
+        "biswann": "20:00",
+        "hilfsmittel": "Spielzeug",
+        "erledigt": true
       }
     ],
     "Alex": [
+      {
+        "wer": "Oprea Sergei",
+        "was": "Zehne putzen",
+        "biswann": "07:15",
+        "hilfsmittel": "Zahnpaste"
+      },
       {
         "wer": "Oprea Sergei",
         "was": "Zehne putzen",

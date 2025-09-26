@@ -63,5 +63,18 @@ app.get("/tasks/:username", (req, res) => {
   res.json(tasks[username] || []);
 });
 
+// ================= Обновить состояние задачи (erledigt) =================
+app.patch("/tasks/:username/:index", (req, res) => {
+  const { username, index } = req.params;
+  const { erledigt } = req.body;
+
+  if (!tasks[username]) return res.status(404).json({ message: "User not found" });
+  if (!tasks[username][index]) return res.status(404).json({ message: "Task not found" });
+
+  tasks[username][index].erledigt = erledigt;
+  saveData({ users, tasks });
+  res.json({ message: "Task updated!" });
+});
+
 // ================= Запуск сервера =================
 app.listen(3000, () => console.log("Server läuft auf Port 3000"));
